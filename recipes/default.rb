@@ -9,5 +9,5 @@ include_recipe 'chocolatey'
 
 chocolatey "jdk#{node['java-choco']['java_version']}" do
   version node['java-choco']['package_version']
-  options = {'-params' => '"both=true"' }
+  options 'params' => '"both=true"'
 end
